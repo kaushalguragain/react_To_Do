@@ -20,6 +20,13 @@ addTodo =(todo) =>
   this.setState({todos});
 }
 
+deleteTodo =(id) =>{
+
+  const todos = this.state.todos.filter(todo => todo.id !== id); //Es6 filter method
+  this.setState({todos});
+}
+
+
   render() {
     const{ todos } = this.state;
     //destructuring objects
@@ -28,8 +35,9 @@ addTodo =(todo) =>
       
        <Navbar />
        <div className="container">
-       <TodoList todos= {todos}/>
-       <AddForm  addTodo={this.addTodo}/>
+       <TodoList deleteTodo={this.deleteTodo} todos= {todos} />
+
+       <AddForm  addTodo={this.addTodo} />
        </div>
       </div>
     );
