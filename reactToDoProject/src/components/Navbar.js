@@ -5,10 +5,10 @@ const Navbar = (props) => {
     props
   );
 
-  setTimeout(()=>{
-      props.history.push('/about');
-    },3000
-  )
+ // setTimeout(()=>{
+   //   props.history.push('/about');
+    //},3000
+  //)
   return(
     <nav>
         <div className="nav-wrapper">
