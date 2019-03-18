@@ -24,6 +24,7 @@ deleteTodo =(id) =>{
 }
 
 render(){
+  console.log(this.props);
   const{ todos } = this.state;//destructuring objects
   return(
     <div>
